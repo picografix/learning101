@@ -1,0 +1,10 @@
+Q1-What is image?
+------->An image is nothing but a binary representation of some visual information.In other words,an image is a two dimentional array of square pixels arranged in rows and coloumns.
+Q2----->brightness-overall lightness or darkness of image.Decreasing the brightness make every pixel in frame darker.
+------->Contrast-difference in brightness between objects in the image.Increasing the contrast makes light areas lighter and dark area in the frame becomes much darker.
+-------->Hue-represents color of something,main indication of color.Value actually telling about color.
+------->Saturation-Value of how dominant the color is.
+Q3--->image processing and computer vision-> THEY both involve doing some computation on images.
+Image processing focus on well processing images.it means that input and output are both images which undergo image processing algorithm.
+Computer vision on other hand focuses on making sense of what a machine sees.it input an image and outputs task specific knowledge such as labels and many information attach to it.
+we can say computer vision is superset of image processing.
