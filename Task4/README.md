@@ -1,0 +1,3 @@
+Dont know why my system was lagging but u can easily track its motion after sometimes from the red line that connects my path which i travel 
+basically what i did is if you move the red part upward it move forward and if you move it right it turns right and similarly..
+for further see my code.. you can easily find it what i did...
