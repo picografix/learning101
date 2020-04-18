@@ -101,25 +101,29 @@ void move(char);
   {
    //calculate the position of the ball
    int posX = dM10 / dArea;
-   int posY = dM01 / dArea;        
-        
+   int posY = dM01 / dArea;
+   int max=0;        
+   if(abs(posX-iLastX)>abs(posY-iLastY)) max=0;
+   else max=1;     
    if (iLastX >= 0 && iLastY >= 0 && posX >= 0 && posY >= 0)
    {
+line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0,0,255), 2);
     //Draw a red line from the previous point to the current point
-    if(posY-iLastY>20){ move('f');
+    if(posY-iLastY>0&&max==1){ move('f');
    cout<<"forward"<<" "<<posX<<" "<<posY<<endl;
 
 }
-    if((posX-iLastX)>20){ move('r');
- cout<<"right"<<" "<<posX<<" "<<posY<<endl;
-}
-    if(posX-iLastX<20){ move('l');
-	cout<<"left"<<" "<<posX<<" "<<posY<<endl;
-}
-    if((posY-iLastY)<20){ move('b');
+ else if((posY-iLastY)<0&&max==1){ move('b');
 	cout<<"backward"<<" "<<posX<<" "<<posY<<endl;
 }
-    line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0,0,255), 2);
+    if((posX-iLastX)>0&&max==0){ move('r');
+ cout<<"right"<<" "<<posX<<" "<<posY<<endl;
+}
+   else if(posX-iLastX<0&&max==0){ move('l');
+	cout<<"left"<<" "<<posX<<" "<<posY<<endl;
+}
+  
+    
    }
 
    iLastX = posX;
